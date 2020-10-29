@@ -1,0 +1,21 @@
+<div class="container text-center">
+  
+  <h2 class="p-4">✒️ <%= @user.first_name %> <%= @user.last_name %> 🖋️</h2>
+  <%
+=begin%>
+ <p><b>Name:</b> <%= @user.name %></p> 
+<%
+=end%>
+  <p class="p-3"><b>Description:</b> <%= @user.description %></p>
+  <p><b>Email:</b> <%= @user.email %></p>
+  <p><b>Age:</b> <%= @user.age %></p>
+  <p><b>City:</b> <%= @user.city.name %></p>
+  <%
+=begin%>
+ <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width=300/> 
+<%
+=end%>
+  <%= link_to "See the city page", city_path(@user.city.id), :class => "btn btn-outline-secondary" %>
+
+</div>
+

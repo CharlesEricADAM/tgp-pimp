@@ -1,0 +1,30 @@
+<div class="container text-center p-3">
+  <% if notice %>
+  <div class="alert alert-success" role="alert">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <% end %>
+
+  <div class="jumbotron pimp text-center">
+    <div class="container">
+      <h1 class="display-3">Make Gossips great again!</h1>
+      <p>A life of gossips.</p>
+      <p><a class="btn btn-primary btn-lg" href=<%= new_gossip_path %> role="button">Create a gossip</a></p>
+
+    </div>
+  </div>
+
+  <h2 class="text-center p-3">🔽 Welcome to the best Gossip website EVER 🔽</h2>
+  <div class="row justify-content-center">
+    <% @gossips.each_with_index do |gossip, i| %>
+      <div class="card m-3" style="width: 18rem;">
+        <div class="list-group">
+          <h5 class="card-title"><%= gossip.title %></h5>
+          <p class="card-text"><%= gossip.user.first_name %></p>
+          <%= link_to "See the full gossip", gossip_path(gossip.id), :class => "btn btn-outline-secondary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+<div class="container text-center">
+
+  <h2 class="p-4">🙊 "<%= @gossip.title %>" 🙊</h2>
+
+  <p><b>Title:</b> <%= @gossip.title %></p>
+  <p><b>Content:</b> <%= @gossip.content %></p>
+  <p class="p-3"><b>Author:</b> <%= @gossip.user.first_name %></p>
+  <p><b>City:</b> <%= @gossip.user.city.name %></p>
+  <p><b>Creation date:</b> <%= @gossip.created_at %></p>
+  
+  <%= link_to "User profile", user_path(Gossip.all.find_by(id: params['id'])), :class => "btn btn-outline-primary m-4" %>
+  <%= link_to "City page", city_path(@gossip.user.city.id), :class => "btn btn-outline-secondary" %>
+  <%= link_to "Edit gossip", edit_gossip_path(:id), :class => "btn btn-outline-warning" %>
+  <%= link_to "Delete gossip", gossips_path, :class => "btn btn-outline-danger" %>
+
+  <h1 class="p-3"> </h1>
+  <div class="form-group">
+    <button type="submit">Comment here</button>
+  </div>
+
+</div>

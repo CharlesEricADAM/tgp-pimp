@@ -1,0 +1,44 @@
+#footer {
+  position: fixed;
+}
+
+.jumbotron-hero {
+  /* Choisis la hauteur ici */
+  height: 300px;
+
+  /* Tu lui donnes une image de background */
+  background-image: url("");
+
+  /* Centre l'image et la met bien sur tous les écrans */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body
+{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pimp {
+  /* Choisis la hauteur ici */
+  height: 300px;
+
+  /* Tu lui donnes une image de background */
+  background-image: url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
+
+  /* Centre l'image et la met bien sur tous les écrans */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bacred
+{
+  background-color: red;
+}
+
+.sutext
+{
+  text-align: center;
+}

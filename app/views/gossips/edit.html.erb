@@ -1,0 +1,23 @@
+<div class="container text-center">
+  <h2 class="text-center p-3">🤫 Edit your gossip 🤫</h2>
+
+<%= form_tag url_for(action: 'update'), method: "post" do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  
+  <div class="form-group">
+    <%= label_tag 'Title', name='Title' %><br/>
+    <%= text_field_tag 'title','', size: 50%>
+    <br /> <br />
+  </div>
+
+  <div class="form-group">
+    <%= label_tag 'Content', name='Content' %><br/>
+    <%= text_area_tag 'content', nil, size: "50x8" %>
+    <br /> <br />
+  </div>
+
+  <button type="submit" class="btn btn-outline-secondary">Edit Gossip</button>
+  <% end %>
+</form>
+
+</div>

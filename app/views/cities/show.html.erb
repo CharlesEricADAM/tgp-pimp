@@ -1,0 +1,18 @@
+  <div class="container text-center">
+    <h2 class="p-4">🙊 "<%= @city.name %>" 🙊</h2>
+  </div>
+
+  <div class="row justify-content-center">
+    <% @city_users.each do |user| %>
+      <% user.gossips.each do |gossip| %>
+        <div class="card m-3" style="width: 18rem;">
+          <div class="list-group">
+            <h5 class="card-title"><%= gossip.title %></h5>
+            <p class="card-text"><%= gossip.user.first_name %></p>
+            <%= link_to "See the full gossip", gossip_path(gossip.id), :class => "btn btn-outline-secondary" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div> 
+</div>

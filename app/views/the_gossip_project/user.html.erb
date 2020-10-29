@@ -1,0 +1,12 @@
+<div class="container text-center">
+  
+  <h2 class="p-4">✒️ <%= Gossip.find(params['id']).user.first_name %> <%= Gossip.find(params['id']).user.last_name %> 🖋️</h2>
+  <p><b>Name:</b> <%= Gossip.find(params['id']).user.name %></p>
+  <p class="p-3"><b>Description:</b> <%= Gossip.find(params['id']).user.description %></p>
+  <p><b>Email:</b> <%= Gossip.find(params['id']).user.email %></p>
+  <p><b>Age:</b> <%= Gossip.find(params['id']).user.age %></p>
+  <p><b>City:</b> <%= Gossip.find(params['id']).user.city.name %></p>
+  <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width=300/>
+  <%= link_to "See the city page", city_path(i+1), :class => "btn btn-outline-secondary" %>
+
+</div>

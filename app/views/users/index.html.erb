@@ -1,0 +1,12 @@
+<h2 class="text-center p-3"> 🤹‍♀️ Users 🤹‍♀️ </h2>
+  <div class="row justify-content-center">
+    <% @users.each_with_index do |user, i| %>
+      <div class="card m-3" style="width: 18rem;">
+        <div class="list-group">
+          <h5 class="card-title"><%= user.first_name %></h5>
+          <p class="card-text"><%= user.last_name %></p>
+          <%= link_to "User profile", user_path(Gossip.all.find_by(id: params['id'])), :class => "btn btn-outline-primary m-4" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
