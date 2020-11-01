@@ -24,6 +24,4 @@ $ shotgun -p 3000
 
 And in your web browser, open http://localhost:3000/home
 
-Pair-programming by @Rudyar (Arthur Rudy) & colinebrlt (Coline Brault)
 
-![](https://cdn3.vectorstock.com/i/1000x1000/01/17/three-women-gossips-standing-and-talking-isolated-vector-13630117.jpg)
